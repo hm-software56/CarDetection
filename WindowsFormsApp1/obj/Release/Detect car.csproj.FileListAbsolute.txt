@@ -1,0 +1,41 @@
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\x64\concrt140.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\x64\cvextern.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\x64\msvcp140.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\x64\opencv_ffmpeg410_64.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\x64\vcruntime140.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\x86\concrt140.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\x86\cvextern.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\x86\msvcp140.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\x86\opencv_ffmpeg410.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\x86\vcruntime140.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe.config
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\WindowsFormsApp1.pdb
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\Emgu.CV.UI.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\Emgu.CV.World.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\ZedGraph.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\Emgu.CV.UI.xml
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\Emgu.CV.World.xml
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\ZedGraph.xml
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\de\ZedGraph.resources.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\es\ZedGraph.resources.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\fr\ZedGraph.resources.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\hu\ZedGraph.resources.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\it\ZedGraph.resources.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\ja\ZedGraph.resources.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\pt\ZedGraph.resources.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\ru\ZedGraph.resources.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\sk\ZedGraph.resources.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\sv\ZedGraph.resources.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\tr\ZedGraph.resources.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\zh-cn\ZedGraph.resources.dll
+D:\C\CarDetection\WindowsFormsApp1\bin\Release\zh-tw\ZedGraph.resources.dll
+D:\C\CarDetection\WindowsFormsApp1\obj\Release\Detect car.csprojAssemblyReference.cache
+D:\C\CarDetection\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Form1.resources
+D:\C\CarDetection\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Form_detect_car.resources
+D:\C\CarDetection\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Properties.Resources.resources
+D:\C\CarDetection\WindowsFormsApp1\obj\Release\Detect car.csproj.GenerateResource.cache
+D:\C\CarDetection\WindowsFormsApp1\obj\Release\Detect car.csproj.CoreCompileInputs.cache
+D:\C\CarDetection\WindowsFormsApp1\obj\Release\Detect car.csproj.CopyComplete
+D:\C\CarDetection\WindowsFormsApp1\obj\Release\WindowsFormsApp1.exe
+D:\C\CarDetection\WindowsFormsApp1\obj\Release\WindowsFormsApp1.pdb

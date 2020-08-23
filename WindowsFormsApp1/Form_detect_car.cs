@@ -13,6 +13,9 @@ namespace WindowsFormsApp1
     {
         Image<Bgr, byte> imgInput;
         VideoCapture capture;
+        int cars_number = 0;
+        int second = 0;
+        int new_cars =0;
         public Form_detect_car()
         {
             InitializeComponent();
@@ -65,10 +68,11 @@ namespace WindowsFormsApp1
                 Image<Bgr, Byte> imgresize = img.Resize(img.Width/2, img.Height/2, Emgu.CV.CvEnum.Inter.Linear);
 
                 String path = Path.GetFullPath(@"D:\C\DetectCar\data\haarcascade_car.xml");
+                //String path = Path.GetFullPath(@"data\haarcascade_car.xml");
                 CascadeClassifier cascadeClassifier = new CascadeClassifier(path);
                 var imgGray = imgresize.Convert<Gray, byte>().Clone();
-                Rectangle[] cars = cascadeClassifier.DetectMultiScale(imgGray, 1.1, 4);
-                foreach(var car in cars)
+                Rectangle[] cars = cascadeClassifier.DetectMultiScale(imgGray, 1.1,5);
+                foreach (var car in cars)
                 {
                     imgresize.Draw(car, new Bgr(0, 0, 255), 2);
                 }
@@ -76,7 +80,7 @@ namespace WindowsFormsApp1
             }
             catch (Exception ex)
             {
-               // MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
         }
 
@@ -108,6 +112,66 @@ namespace WindowsFormsApp1
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void DetectCounting(Image<Bgr, byte> img)
+        {
+            try
+            {
+                Image<Bgr, Byte> imgresize = img.Resize(img.Width / 2, img.Height / 2, Emgu.CV.CvEnum.Inter.Linear);
+
+                String path = Path.GetFullPath(@"D:\C\DetectCar\data\haarcascade_car.xml");
+                CascadeClassifier cascadeClassifier = new CascadeClassifier(path);
+                var imgGray = imgresize.Convert<Gray, byte>().Clone();
+                Rectangle[] cars = cascadeClassifier.DetectMultiScale(imgGray, 1.1, 5);
+                int aa = 0;
+                DateTime now = DateTime.Now;
+
+                foreach (var car in cars)
+                {
+                    imgresize.Draw(car, new Bgr(0, 0, 255), 2);
+                    int cx = car.Width / 2;
+                    int cy = car.Height / 2;
+
+                    Point center = new Point(car.X + cx, car.Y + cy);
+
+                    CvInvoke.Circle(imgresize, center, 3, new MCvScalar(0, 0, 255), 3);
+                    CvInvoke.Line(imgresize, new Point(0, 250), new Point(1200, 250), new MCvScalar(255, 0, 0),1);
+                    
+                    //DateTime now = DateTime.Now;
+                    /*if(second>=60)
+                    {
+                        second =1;
+                    }*/
+                    //aa = center.Y;
+                    aa = now.Second;
+                    if (center.Y >= 200 && center.Y <= 225)
+                    {
+                        if (now.Second > second)
+                        {
+                            second = now.Second + 10;
+                            if (second >= 60)
+                            {
+                                second = 1;
+                            }
+                                
+                            //new_cars = 0;
+                            cars_number++;
+                            CvInvoke.Line(imgresize, new Point(0, 250), new Point(1200, 250), new MCvScalar(0, 0, 255), 1);
+
+                        }
+                        //CvInvoke.Line(imgresize, new Point(25, 550), new Point(1200, 550), new MCvScalar(0, 0, 255), 3);
+                        //Console.WriteLine($"cars : {cars_number}");
+                    }
+
+                }
+                CvInvoke.PutText(imgresize, $"Count cars:{cars_number}-{second}-{aa}", new System.Drawing.Point(10, 270), Emgu.CV.CvEnum.FontFace.HersheyPlain, 1.0, new MCvScalar(0, 0, 255));
+                pictureBox1.Image = imgresize.Bitmap;
+            }
+            catch (Exception ex)
+            {
+                // MessageBox.Show(ex.Message);
             }
         }
 
